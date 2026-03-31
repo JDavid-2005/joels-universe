@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Joel's Universe – Mi espacio personal. Fotos, momentos y todo lo que me define. 🕷️" />
+  <meta name="author" content="Joel" />
+  <title>Joel's Universe 🕷️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ── PARTICLES ──────────────────────────── -->
+  <div class="particles-container" aria-hidden="true">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- ── NAVBAR ────────────────────────────── -->
+  <header>
+    <nav class="navbar" id="navbar" aria-label="Navegación principal">
+      <span class="navbar-logo" onclick="scrollToTop()" role="button" tabindex="0">🕷️ Joel's Universe</span>
+
+      <div class="navbar-actions">
+        <!-- Va directo a la página en GitHub -->
+        <a href="https://a242844jr-joel.github.io/pagina-web/" target="_blank" rel="noopener noreferrer"
+          class="btn-proyectos" id="btn-nav-proyectos" aria-label="Ver mis proyectos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          Proyectos
+        </a>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false"
+          aria-controls="drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── DRAWER OVERLAY ─────────────────────── -->
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+
+  <!-- ── SIDE DRAWER ────────────────────────── -->
+  <nav class="drawer" id="drawer" role="navigation" aria-label="Menú lateral" aria-hidden="true">
+
+    <div class="drawer-header">
+      <span class="drawer-title">🕷️ Menú</span>
+      <button class="drawer-close" id="drawerClose" onclick="closeDrawer()" aria-label="Cerrar menú">✕</button>
+    </div>
+
+    <div class="drawer-nav">
+      <a href="#" id="menu-inicio" onclick="showSection('feed'); closeDrawer();" aria-label="Inicio">
+        <span class="nav-icon" aria-hidden="true">🏠</span>
+        Inicio
+      </a>
+      <a href="#" id="menu-sobre" onclick="showSection('about'); closeDrawer();" aria-label="Sobre mí">
+        <span class="nav-icon" aria-hidden="true">👤</span>
+        Sobre Mí
+      </a>
+      <a href="#" id="menu-contacto" onclick="showSection('contact'); closeDrawer();" aria-label="Contacto">
+        <span class="nav-icon" aria-hidden="true">✉️</span>
+        Redes sociales
+      </a>
+
+      <div class="drawer-divider" aria-hidden="true"></div>
+
+      <a href="https://a242844jr-joel.github.io/pagina-web/" target="_blank" rel="noopener noreferrer"
+        id="menu-proyectos" aria-label="Mis proyectos">
+        <span class="nav-icon" aria-hidden="true">🚀</span>
+        Mis Proyectos<br />
+        (Lo hice en clase equide)
+      </a>
+    </div>
+  </nav>
+
+  <!-- ── MAIN ──────────────────────────────── -->
+  <main class="main-wrapper" role="main">
+
+    <!-- PROFILE ─────────────────────────────── -->
+    <section class="profile-section" id="profileSection" aria-label="Perfil">
+      <div class="profile-header">
+
+        <!-- Avatar -->
+        <div class="avatar-wrap" onclick="openAvatarLightbox()" style="cursor:pointer;" title="Ver foto de perfil"
+          role="button" tabindex="0" onkeydown="if(event.key==='Enter') openAvatarLightbox()"
+          aria-label="Ver foto de perfil ampliada">
+          <div class="avatar-ring">
+            <img src="assets/perfil.jpeg" alt="Foto de perfil de Joel" id="profileAvatar" />
+          </div>
+          <span class="avatar-status" title="En línea" aria-label="En línea"></span>
+        </div>
+
+        <!-- Info -->
+        <div class="profile-info">
+          <h1 class="profile-username">
+            <span>@00.jlvrs</span>
+            <span class="verified-badge" title="Verificado" aria-label="Verificado">✓</span>
+          </h1>
+          <p class="profile-fullname">Joel David RM</p>
+          <p class="profile-bio">
+            <strong>Joel 🕷️</strong>.<br />
+            No sé que hice pero intentaré mantenerlo vivo xd.<br />
+            Pa que sirve esto? No sé pero subiré fotos que no publico porque me llega.<br />
+          </p>
+        </div>
+      </div>
+
+      <div class="profile-divider" aria-hidden="true"></div>
+    </section>
+
+    <!-- TAB BAR ────────────────────────────── -->
+    <div class="tab-bar" id="tabBar" role="tablist" aria-label="Vistas">
+      <button class="tab-item active" id="tab-grid" role="tab" aria-selected="true" onclick="switchView('grid')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" />
+          <rect x="14" y="3" width="7" height="7" />
+          <rect x="3" y="14" width="7" height="7" />
+          <rect x="14" y="14" width="7" height="7" />
+        </svg>
+        Grid
+      </button>
+      <button class="tab-item" id="tab-feed" role="tab" aria-selected="false" onclick="switchView('feed')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+        Feed
+      </button>
+    </div>
+
+    <!-- FEED / GALLERY ─────────────────────── -->
+    <section class="feed-section content-section active" id="feed-section" aria-label="Galería">
+
+      <!-- Grid -->
+      <div class="photo-grid" id="photoGrid" role="list" aria-label="Cuadrícula"></div>
+
+      <!-- Feed list -->
+      <div class="photo-feed" id="photoFeed" role="list" aria-label="Feed" style="display:none;"></div>
+    </section>
+
+    <!-- ABOUT ──────────────────────────────── -->
+    <section class="about-section content-section" id="about-section" aria-label="Sobre mí">
+      <h2 class="section-title">Sobre Mí</h2>
+      <div class="about-card">
+        <p class="about-greeting gradient-text">¡Ñiñiñiñi, soy Joel!</p>
+
+        <!-- Info personal -->
+        <div class="about-info-grid">
+
+          <div class="about-info-item">
+            <span class="about-info-icon">👤</span>
+            <div>
+              <p class="about-info-label">Nombre</p>
+              <p class="about-info-value">Joel David</p>
+            </div>
+          </div>
+
+          <div class="about-info-item">
+            <span class="about-info-icon">🔢</span>
+            <div>
+              <p class="about-info-label">Edad</p>
+              <p class="about-info-value">20 años</p>
+            </div>
+          </div>
+
+          <div class="about-info-item">
+            <span class="about-info-icon">🎂</span>
+            <div>
+              <p class="about-info-label">Cumpleaños</p>
+              <p class="about-info-value">24 de Junio</p>
+            </div>
+          </div>
+
+          <div class="about-info-item">
+            <span class="about-info-icon">🏫</span>
+            <div>
+              <p class="about-info-label">Centro</p>
+              <p class="about-info-value">Institut Escola del Treball</p>
+            </div>
+          </div>
+
+          <div class="about-info-item about-info-item--full">
+            <span class="about-info-icon">📚</span>
+            <div>
+              <p class="about-info-label">Estudios</p>
+              <p class="about-info-value">SMX (Sistemas Microinformáticos y Redes)</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT ────────────────────────────── -->
+    <section class="contact-section content-section" id="contact-section" aria-label="Contacto">
+      <h2 class="section-title">🌐 Redes Sociales</h2>
+      <div class="contact-card">
+        <p style="color:var(--clr-text-muted); font-size:0.9rem; margin-bottom:1rem;">
+          Sigueme si quieres.
+        </p>
+        <div class="contact-info-list" role="list">
+
+          <!-- Facebook -->
+          <a class="contact-info-item" href="https://www.facebook.com/share/19FZLnvBmx/" target="_blank"
+            rel="noopener noreferrer" role="listitem" aria-label="Facebook de Joel">
+            <div class="contact-info-icon facebook" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </div>
+            <div>
+              <p class="contact-info-label">Facebook</p>
+              <p class="contact-info-value">Joel</p>
+            </div>
+          </a>
+
+          <!-- TikTok -->
+          <a class="contact-info-item" href="https://tiktok.com/@xoel.pp" target="_blank" rel="noopener noreferrer"
+            role="listitem" aria-label="TikTok de Joel">
+            <div class="contact-info-icon tiktok" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.87a8.2 8.2 0 0 0 4.8 1.54V7a4.85 4.85 0 0 1-1.03-.31z" />
+              </svg>
+            </div>
+            <div>
+              <p class="contact-info-label">TikTok</p>
+              <p class="contact-info-value">@xoel.pp</p>
+            </div>
+          </a>
+
+          <!-- Email -->
+          <a class="contact-info-item" href="mailto:joel.david.rm.2005@gmail.com" role="listitem"
+            aria-label="Correo de Joel">
+            <div class="contact-info-icon email" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div>
+              <p class="contact-info-label">Correo</p>
+              <p class="contact-info-value">joel.david.rm.2005@gmail.com</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER ─────────────────────────────── -->
+    <footer class="footer" role="contentinfo">
+      <span class="footer-logo">🕷️ Joel's Universe</span>
+      <p>Hecho por aburrimiento por Joel &nbsp;·&nbsp; <span id="year"></span></p>
+    </footer>
+
+  </main>
+
+  <!-- ── LIGHTBOX ──────────────────────────── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <div class="lightbox-content">
+      <img class="lightbox-image" id="lightboxImg" src="" alt="" />
+      <div class="lightbox-body">
+        <p class="feed-card-likes" id="lightboxTitle"></p>
+        <p class="feed-card-caption" id="lightboxCaption"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TOASTS ────────────────────────────── -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- ── SCRIPT ────────────────────────────── -->
+  <script>
+    /* ── Data ── */
+    let posts = [
+      {
+        id: 1, img: 'assets/post1.jpeg',
+        title: 'No me drogo (o si?)',
+        caption: 'No sé cuando decidí estudiar SMX...',
+        tags: ['#NoEstudienSMX'],
+        likes: 42, liked: false, time: 'Hace 2 días'
+      },
+      {
+        id: 2, img: 'assets/post2.jpeg',
+        title: 'Visca Barça sempre 🔵🔴',
+        caption: 'Pronto la Sexta',
+        tags: ['#PedriMiHombre'],
+        likes: 150, liked: false, time: 'Hace 5 días'
+      },
+      {
+        id: 3, img: 'assets/post3.jpeg',
+        title: 'Jorgito Luna',
+        caption: 'El intocable George Moon',
+        tags: ['#Ricolaaaaaas'],
+        likes: 129, liked: false, time: 'Hace 1 semana'
+      },
+      {
+        id: 4, img: 'assets/post4.jpeg',
+        title: 'Mi lesbiana favorita 🏳️‍🌈',
+        caption: 'Iris, Yhssis, Eevee.',
+        tags: ['#MisFotos'],
+        likes: 63, liked: false, time: 'Reciente'
+      },
+      {
+        id: 5, img: 'assets/post5.jpeg',
+        title: 'Dame tu galletita 😈',
+        caption: 'Panchitada moment.',
+        tags: ['#MisFotos'],
+        likes: 69, liked: false, time: 'Reciente'
+      },
+      {
+        id: 6, img: 'assets/post6.jpeg',
+        title: 'Mis Reinas',
+        caption: 'Mi loca y mi más loca',
+        tags: ['#MisFotos'],
+        likes: 84, liked: false, time: 'Reciente'
+      }
+    ];
+
+    let currentView = 'grid';
+
+    /* ── Init ── */
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('year').textContent = new Date().getFullYear();
+      renderAll();
+      setupListeners();
+    });
+
+    /* ── Render ── */
+    function renderAll() { renderGrid(); renderFeed(); }
+
+    function renderGrid() {
+      document.getElementById('photoGrid').innerHTML = posts.map(p => `
+      <article class="photo-grid-item" role="listitem" tabindex="0"
+        onclick="openLightbox(${p.id})"
+        onkeydown="if(event.key==='Enter') openLightbox(${p.id})"
+        aria-label="${p.title}">
+        <img src="${p.img}" alt="${p.title}" loading="lazy" />
+        <div class="grid-overlay" aria-hidden="true">
+          <span class="grid-stat">❤️ ${p.likes}</span>
+        </div>
+      </article>`).join('');
+    }
+
+    function renderFeed() {
+      document.getElementById('photoFeed').innerHTML = posts.map((p, i) => `
+      <article class="feed-card" role="listitem" style="animation-delay:${i * 0.1}s">
+        <div class="feed-card-header">
+          <div class="card-avatar">
+            <img src="assets/perfil.jpeg" alt="Avatar" />
+          </div>
+          <div class="card-meta">
+            <p class="card-name">@00.jlvrs 🕷️</p>
+            <p class="card-time">${p.time}</p>
+          </div>
+          <button class="card-options-btn" aria-label="Opciones">···</button>
+        </div>
+        <div class="feed-card-image">
+          <img src="${p.img}" alt="${p.title}" loading="lazy" />
+        </div>
+        <div class="feed-card-actions">
+          <button class="action-btn like ${p.liked ? 'liked' : ''}" id="like-btn-${p.id}"
+            onclick="toggleLike(${p.id})" aria-label="${p.liked ? 'Quitar like' : 'Dar like'}">
+            <svg viewBox="0 0 24 24" fill="${p.liked ? 'currentColor' : 'none'}"
+                 stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06
+                       a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78
+                       1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            <span id="likes-${p.id}">${p.likes}</span>
+          </button>
+          <button class="action-btn" onclick="openLightbox(${p.id})" aria-label="Ver">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            Ver
+          </button>
+          <button class="action-btn action-btn-spacer"
+            onclick="sharePost(${p.id})" aria-label="Compartir">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" aria-hidden="true">
+              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/>
+              <circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+          </button>
+        </div>
+        <div class="feed-card-content">
+          <p class="feed-card-likes">❤️ ${p.likes} me gusta</p>
+          <p class="feed-card-caption">
+            <strong>@00.jlvrs</strong> ${p.caption}
+          </p>
+          <div class="feed-card-tags">
+            ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+          </div>
+        </div>
+      </article>`).join('');
+    }
+
+    /* ── View switcher ── */
+    function switchView(view) {
+      currentView = view;
+      const grid = document.getElementById('photoGrid');
+      const feed = document.getElementById('photoFeed');
+      const tg = document.getElementById('tab-grid');
+      const tf = document.getElementById('tab-feed');
+
+      if (view === 'grid') {
+        grid.style.display = 'grid'; feed.style.display = 'none';
+        tg.classList.add('active'); tg.setAttribute('aria-selected', 'true');
+        tf.classList.remove('active'); tf.setAttribute('aria-selected', 'false');
+      } else {
+        grid.style.display = 'none'; feed.style.display = 'flex';
+        tf.classList.add('active'); tf.setAttribute('aria-selected', 'true');
+        tg.classList.remove('active'); tg.setAttribute('aria-selected', 'false');
+      }
+      showSection('feed');
+    }
+
+    /* ── Section ── */
+    function showSection(s) {
+      ['feed', 'about', 'contact'].forEach(id => {
+        const el = document.getElementById(id + '-section');
+        if (el) el.classList.remove('active');
+      });
+      const t = document.getElementById(s + '-section');
+      if (t) t.classList.add('active');
+
+      const ps = document.getElementById('profileSection');
+      const tb = document.getElementById('tabBar');
+      if (ps) ps.style.display = s === 'feed' ? '' : 'none';
+      if (tb) tb.style.display = s === 'feed' ? '' : 'none';
+    }
+
+    /* ── Like ── */
+    function toggleLike(id) {
+      const p = posts.find(x => x.id === id); if (!p) return;
+      p.liked = !p.liked;
+      p.likes += p.liked ? 1 : -1;
+      const btn = document.getElementById(`like-btn-${id}`);
+      const cnt = document.getElementById(`likes-${id}`);
+      if (btn) {
+        btn.classList.toggle('liked', p.liked);
+        btn.setAttribute('aria-label', p.liked ? 'Quitar like' : 'Dar like');
+        const svg = btn.querySelector('svg');
+        if (svg) svg.setAttribute('fill', p.liked ? 'currentColor' : 'none');
+      }
+      if (cnt) cnt.textContent = p.likes;
+      if (p.liked) showToast('❤️ ¡Me gusta!', 'success');
+    }
+
+    /* ── Share ── */
+    function sharePost(id) {
+      if (navigator.share) {
+        navigator.share({ url: window.location.href });
+      } else {
+        navigator.clipboard.writeText(window.location.href)
+          .then(() => showToast('🔗 Enlace copiado', 'success'));
+      }
+    }
+
+    /* ── Lightbox foto de perfil ── */
+    function openAvatarLightbox() {
+      document.getElementById('lightboxImg').src = 'assets/perfil.jpeg';
+      document.getElementById('lightboxImg').alt = 'Foto de perfil de Joel';
+      document.getElementById('lightboxTitle').textContent = '🕷️ Joel';
+      document.getElementById('lightboxCaption').innerHTML = '<strong>@00.jlvrs</strong> · Foto de perfil';
+      const lb = document.getElementById('lightbox');
+      lb.classList.add('active'); lb.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    /* ── Lightbox fotos ── */
+    function openLightbox(id) {
+      const p = posts.find(x => x.id === id); if (!p) return;
+      document.getElementById('lightboxImg').src = p.img;
+      document.getElementById('lightboxImg').alt = p.title;
+      document.getElementById('lightboxTitle').textContent = `❤️ ${p.likes} me gusta · ${p.title}`;
+      document.getElementById('lightboxCaption').innerHTML = `<strong>@00.jlvrs</strong> ${p.caption}`;
+      const lb = document.getElementById('lightbox');
+      lb.classList.add('active'); lb.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox');
+      lb.classList.remove('active'); lb.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    /* ── Drawer ── */
+    function openDrawer() {
+      document.getElementById('drawer').classList.add('active');
+      document.getElementById('drawerOverlay').classList.add('active');
+      document.getElementById('hamburgerBtn').classList.add('open');
+      document.getElementById('hamburgerBtn').setAttribute('aria-expanded', 'true');
+      document.getElementById('drawer').setAttribute('aria-hidden', 'false');
+    }
+
+    function closeDrawer() {
+      document.getElementById('drawer').classList.remove('active');
+      document.getElementById('drawerOverlay').classList.remove('active');
+      document.getElementById('hamburgerBtn').classList.remove('open');
+      document.getElementById('hamburgerBtn').setAttribute('aria-expanded', 'false');
+      document.getElementById('drawer').setAttribute('aria-hidden', 'true');
+    }
+
+    /* ── Toast ── */
+    function showToast(msg, type = 'success') {
+      const c = document.getElementById('toastContainer');
+      const t = document.createElement('div');
+      t.className = `toast ${type}`;
+      t.textContent = msg;
+      c.appendChild(t);
+      requestAnimationFrame(() => requestAnimationFrame(() => t.classList.add('show')));
+      setTimeout(() => { t.classList.remove('show'); setTimeout(() => t.remove(), 450); }, 3000);
+    }
+
+    /* ── Misc ── */
+    function scrollToTop() {
+      showSection('feed');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /* ── Listeners ── */
+    function setupListeners() {
+      window.addEventListener('scroll', () => {
+        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+      });
+      document.getElementById('hamburgerBtn').addEventListener('click', openDrawer);
+      document.getElementById('drawerClose').addEventListener('click', closeDrawer);
+      document.getElementById('drawerOverlay').addEventListener('click', closeDrawer);
+      document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+      document.getElementById('lightbox').addEventListener('click', e => {
+        if (e.target === e.currentTarget) closeLightbox();
+      });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') { closeLightbox(); closeDrawer(); }
+      });
+    }
+  </script>
+</body>
+
+</html>
