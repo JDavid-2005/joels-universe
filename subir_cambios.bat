@@ -10,7 +10,7 @@
 ::
 :: ==========================================
 
-:: Buscar donde está instalado Git
+:: Buscar donde esta instalado Git
 set "GIT_CMD=git"
 if exist "C:\Program Files\Git\cmd\git.exe" set "GIT_CMD=C:\Program Files\Git\cmd\git.exe"
 if exist "%LOCALAPPDATA%\Programs\Git\cmd\git.exe" set "GIT_CMD=%LOCALAPPDATA%\Programs\Git\cmd\git.exe"
@@ -20,10 +20,10 @@ echo   Subiendo cambios a Joel's Universe...
 echo ==========================================
 echo.
 
-:: 1. Añadimos todos los archivos nuevos o modificados
+:: 1. Anadimos todos los archivos nuevos o modificados
 "%GIT_CMD%" add .
 
-:: 2. Guardamos los cambios con un mensaje automático de la fecha/hora
+:: 2. Guardamos los cambios con un mensaje automatico de la fecha/hora
 set "datetime=%date% %time%"
 "%GIT_CMD%" commit -m "Actualizacion: %datetime%"
 
@@ -36,10 +36,10 @@ echo ==========================================
 
 echo.
 echo ==========================================
-echo   ¡Listo! Tus cambios están en internet.
+echo   OK! Tus cambios estan en internet.
 echo   (Recuerda que tardan 1 o 2 minutos en verse)
 echo.
-echo   🔗 Tu web está viva aquí:
+echo   Tu web esta viva aqui:
 echo   https://JDavid-2005.github.io/joels-universe/
 echo ==========================================
 pause
