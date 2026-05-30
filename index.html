@@ -297,43 +297,55 @@
         id: 1, img: 'assets/post1.jpeg',
         title: 'No me drogo (o si?)',
         caption: 'No sé cuando decidí estudiar SMX...',
-        tags: ['#NoEstudienSMX'],
-        likes: 42, liked: false, time: 'Hace 2 días'
+        tags: ['#NoEstudienSMX']
       },
       {
         id: 2, img: 'assets/post2.jpeg',
         title: 'Visca Barça sempre 🔵🔴',
         caption: 'Pronto la Sexta',
-        tags: ['#PedriMiHombre'],
-        likes: 150, liked: false, time: 'Hace 5 días'
+        tags: ['#PedriMiHombre']
       },
       {
         id: 3, img: 'assets/post3.jpeg',
         title: 'Jorgito Luna',
         caption: 'El intocable George Moon',
-        tags: ['#Ricolaaaaaas'],
-        likes: 129, liked: false, time: 'Hace 1 semana'
+        tags: ['#Ricolaaaaaas']
       },
       {
         id: 4, img: 'assets/post4.jpeg',
         title: 'Mi lesbiana favorita 🏳️‍🌈',
         caption: 'Iris, Yhssis, Eevee.',
-        tags: ['#MisFotos'],
-        likes: 63, liked: false, time: 'Reciente'
+        tags: ['#MisFotos']
       },
       {
         id: 5, img: 'assets/post5.jpeg',
         title: 'Dame tu galletita 😈',
         caption: 'Panchitada moment.',
-        tags: ['#MisFotos'],
-        likes: 69, liked: false, time: 'Reciente'
+        tags: ['#MisFotos']
       },
       {
         id: 6, img: 'assets/post6.jpeg',
         title: 'Mis Reinas',
         caption: 'Mi loca y mi más loca',
-        tags: ['#MisFotos'],
-        likes: 84, liked: false, time: 'Reciente'
+        tags: ['#MisFotos']
+      },
+      {
+        id: 7, img: 'assets/post7.jpeg',
+        title: 'AleZoe',
+        caption: 'Pelean más que la inlkbngasg pero se aman',
+        tags: ['#MisFotos']
+      },
+      {
+        id: 8, img: 'assets/post8.jpeg',
+        title: 'Freddy?',
+        caption: 'Mare meva noi',
+        tags: ['#MisFotos']
+      },
+      {
+        id: 9, img: 'assets/post9.jpeg',
+        title: 'Guau',
+        caption: 'Si, soy ese realmente',
+        tags: ['#MisFotos']
       }
     ];
 
@@ -356,9 +368,6 @@
         onkeydown="if(event.key==='Enter') openLightbox(${p.id})"
         aria-label="${p.title}">
         <img src="${p.img}" alt="${p.title}" loading="lazy" />
-        <div class="grid-overlay" aria-hidden="true">
-          <span class="grid-stat">❤️ ${p.likes}</span>
-        </div>
       </article>`).join('');
     }
 
@@ -371,7 +380,6 @@
           </div>
           <div class="card-meta">
             <p class="card-name">@00.jlvrs 🕷️</p>
-            <p class="card-time">${p.time}</p>
           </div>
           <button class="card-options-btn" aria-label="Opciones">···</button>
         </div>
@@ -379,16 +387,6 @@
           <img src="${p.img}" alt="${p.title}" loading="lazy" />
         </div>
         <div class="feed-card-actions">
-          <button class="action-btn like ${p.liked ? 'liked' : ''}" id="like-btn-${p.id}"
-            onclick="toggleLike(${p.id})" aria-label="${p.liked ? 'Quitar like' : 'Dar like'}">
-            <svg viewBox="0 0 24 24" fill="${p.liked ? 'currentColor' : 'none'}"
-                 stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06
-                       a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78
-                       1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-            </svg>
-            <span id="likes-${p.id}">${p.likes}</span>
-          </button>
           <button class="action-btn" onclick="openLightbox(${p.id})" aria-label="Ver">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  stroke-width="2" aria-hidden="true">
@@ -409,7 +407,6 @@
           </button>
         </div>
         <div class="feed-card-content">
-          <p class="feed-card-likes">❤️ ${p.likes} me gusta</p>
           <p class="feed-card-caption">
             <strong>@00.jlvrs</strong> ${p.caption}
           </p>
@@ -498,7 +495,7 @@
       const p = posts.find(x => x.id === id); if (!p) return;
       document.getElementById('lightboxImg').src = p.img;
       document.getElementById('lightboxImg').alt = p.title;
-      document.getElementById('lightboxTitle').textContent = `❤️ ${p.likes} me gusta · ${p.title}`;
+      document.getElementById('lightboxTitle').textContent = p.title;
       document.getElementById('lightboxCaption').innerHTML = `<strong>@00.jlvrs</strong> ${p.caption}`;
       const lb = document.getElementById('lightbox');
       lb.classList.add('active'); lb.setAttribute('aria-hidden', 'false');
