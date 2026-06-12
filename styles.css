@@ -1952,9 +1952,9 @@ body::after {
 /* ── Spidey decorativo (borde superior derecho) ── */
 .cy-spidey-wrap {
   position: absolute;
-  top: 15px;
-  right: 40px;
-  width: 100px;
+  top: -35px;     /* Hace que Spidey asome por encima del borde de la tarjeta */
+  right: 25px;    /* Margen desde el lado derecho */
+  width: 120px;   /* Tamaño un poco más grande y notorio en ordenador */
   pointer-events: none;
   z-index: 15;
   overflow: hidden;
@@ -1968,19 +1968,20 @@ body::after {
   mix-blend-mode: screen;
   /* elimina fondo oscuro/negro */
   filter: drop-shadow(0 4px 12px rgba(204, 0, 0, 0.3));
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
 }
 
 .cy-spidey:hover {
   opacity: 1;
   filter: drop-shadow(0 4px 20px rgba(204, 0, 0, 0.55));
+  transform: translateY(-5px); /* Pequeño salto al pasar el ratón */
 }
 
 /* Ajustes para móviles */
 @media (max-width: 600px) {
   .cy-spidey-wrap {
-    width: 65px;      /* Más pequeño en móvil */
-    right: 15px;      /* Más pegado al borde en pantallas estrechas */
-    top: 35px;        /* Un poco más abajo para que no estorbe arriba */
+    width: 85px;      /* En móvil no tan grande para no tapar contenido */
+    right: 5px;       /* Más pegado a la derecha en móviles */
+    top: -25px;       /* Se mantiene asomando por encima del borde */
   }
 }
