@@ -1975,3 +1975,12 @@ body::after {
   opacity: 1;
   filter: drop-shadow(0 4px 20px rgba(204, 0, 0, 0.55));
 }
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+  .cy-spidey-wrap {
+    width: 65px;      /* Más pequeño en móvil */
+    right: 15px;      /* Más pegado al borde en pantallas estrechas */
+    top: 10px;        /* Un poco más arriba */
+  }
+}
