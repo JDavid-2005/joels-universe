@@ -30,7 +30,7 @@
   <!-- ── NAVBAR ────────────────────────────── -->
   <header>
     <nav class="navbar" id="navbar" aria-label="Navegación principal">
-      <span class="navbar-logo" onclick="scrollToTop()" role="button" tabindex="0">🕷️ Joel's Universe</span>
+      <span class="navbar-logo" onclick="scrollToTop()" role="button" tabindex="0"><img src="assets/spidey-perfil.png" class="spider-icon" alt="" /> Joel's Universe</span>
 
       <div class="navbar-actions">
         <!-- Va directo a la página en GitHub -->
@@ -59,7 +59,7 @@
   <nav class="drawer" id="drawer" role="navigation" aria-label="Menú lateral" aria-hidden="true">
 
     <div class="drawer-header">
-      <span class="drawer-title">🕷️ Menú</span>
+      <span class="drawer-title"><img src="assets/spidey-perfil.png" class="spider-icon" alt="" /> Menú</span>
       <button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">✕</button>
     </div>
 
@@ -182,11 +182,6 @@
               </div>
             </div>
           </div><!-- /cy-card-body -->
-
-          <!-- Spidey en el borde superior derecho -->
-          <div class="cy-spidey-wrap" aria-hidden="true">
-            <img src="assets/spidey-perfil.png" alt="" class="cy-spidey" />
-          </div>
 
           <!-- ── Status bar ── -->
           <div class="cy-status-bar" aria-hidden="true">
@@ -354,7 +349,7 @@
 
     <!-- FOOTER ─────────────────────────────── -->
     <footer class="footer" role="contentinfo">
-      <span class="footer-logo">🕷️ Joel's Universe</span>
+      <span class="footer-logo"><img src="assets/spidey-perfil.png" class="spider-icon" alt="" /> Joel's Universe</span>
       <p>Joel &nbsp;·&nbsp; <span id="year"></span></p>
     </footer>
 
@@ -465,7 +460,7 @@
             <img src="assets/perfil.jpeg" alt="Avatar" />
           </div>
           <div class="card-meta">
-            <p class="card-name">@00.jlvrs 🕷️</p>
+            <p class="card-name">@00.jlvrs <img src="assets/spidey-perfil.png" class="spider-icon" alt="" /></p>
           </div>
           <button class="card-options-btn" aria-label="Opciones">···</button>
         </div>
@@ -573,7 +568,7 @@
     function openAvatarLightbox() {
       document.getElementById('lightboxImg').src = 'assets/perfil.jpeg';
       document.getElementById('lightboxImg').alt = 'Foto de perfil de Joel';
-      document.getElementById('lightboxTitle').textContent = '🕷️ Joel';
+      document.getElementById('lightboxTitle').innerHTML = '<img src="assets/spidey-perfil.png" class="spider-icon" alt="" /> Joel';
       document.getElementById('lightboxCaption').innerHTML = '<strong>@00.jlvrs</strong> · Foto de perfil';
       const lb = document.getElementById('lightbox');
       lb.classList.add('active'); lb.setAttribute('aria-hidden', 'false');
