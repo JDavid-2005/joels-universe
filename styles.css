@@ -1981,6 +1981,6 @@ body::after {
   .cy-spidey-wrap {
     width: 65px;      /* Más pequeño en móvil */
     right: 15px;      /* Más pegado al borde en pantallas estrechas */
-    top: 10px;        /* Un poco más arriba */
+    top: 35px;        /* Un poco más abajo para que no estorbe arriba */
   }
 }
