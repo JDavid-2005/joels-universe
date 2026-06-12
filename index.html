@@ -60,7 +60,7 @@
 
     <div class="drawer-header">
       <span class="drawer-title">🕷️ Menú</span>
-      <button class="drawer-close" id="drawerClose" onclick="closeDrawer()" aria-label="Cerrar menú">✕</button>
+      <button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">✕</button>
     </div>
 
     <div class="drawer-nav">
@@ -97,7 +97,7 @@
         <div class="cy-card" id="cyCard">
 
           <!-- Neon edge bars -->
-          <div class="cy-top-bar"    aria-hidden="true"></div>
+          <div class="cy-top-bar" aria-hidden="true"></div>
           <div class="cy-bottom-bar" aria-hidden="true"></div>
 
           <!-- Side accent lines -->
@@ -106,63 +106,61 @@
 
           <!-- HUD tick marks -->
           <div class="cy-ticks cy-ticks--l" aria-hidden="true">
-            <div class="cy-tick"></div><div class="cy-tick"></div>
-            <div class="cy-tick"></div><div class="cy-tick"></div>
+            <div class="cy-tick"></div>
+            <div class="cy-tick"></div>
+            <div class="cy-tick"></div>
+            <div class="cy-tick"></div>
             <div class="cy-tick"></div>
           </div>
           <div class="cy-ticks cy-ticks--r" aria-hidden="true">
-            <div class="cy-tick"></div><div class="cy-tick"></div>
-            <div class="cy-tick"></div><div class="cy-tick"></div>
+            <div class="cy-tick"></div>
+            <div class="cy-tick"></div>
+            <div class="cy-tick"></div>
+            <div class="cy-tick"></div>
             <div class="cy-tick"></div>
           </div>
 
           <!-- ── Beveled corners (SVG mechanical) ── -->
           <div class="cy-corner cy-corner--tl" aria-hidden="true">
             <svg viewBox="0 0 28 28">
-              <polyline points="0,20 0,0 20,0"  class="cy-svg-red"  stroke-width="1.5"/>
-              <polyline points="0,28 0,0 28,0"  class="cy-svg-cyan" stroke-width="0.6" opacity="0.5"/>
-              <rect x="0" y="0" width="5" height="5" class="cy-svg-red" stroke-width="1"/>
-              <circle cx="10" cy="10" r="2" stroke="rgba(0,229,255,0.6)" stroke-width="0.8" fill="none"/>
-              <polyline points="6,0 6,6 0,6" stroke="rgba(0,229,255,0.4)" stroke-width="0.5" fill="none"/>
+              <polyline points="0,20 0,0 20,0" class="cy-svg-red" stroke-width="1.5" />
+              <polyline points="0,28 0,0 28,0" class="cy-svg-cyan" stroke-width="0.6" opacity="0.5" />
+              <rect x="0" y="0" width="5" height="5" class="cy-svg-red" stroke-width="1" />
+              <circle cx="10" cy="10" r="2" stroke="rgba(0,229,255,0.6)" stroke-width="0.8" fill="none" />
+              <polyline points="6,0 6,6 0,6" stroke="rgba(0,229,255,0.4)" stroke-width="0.5" fill="none" />
             </svg>
           </div>
           <div class="cy-corner cy-corner--tr" aria-hidden="true">
             <svg viewBox="0 0 28 28">
-              <polyline points="0,20 0,0 20,0"  class="cy-svg-cyan" stroke-width="1.5"/>
-              <rect x="0" y="0" width="5" height="5" class="cy-svg-cyan" stroke-width="1"/>
-              <circle cx="10" cy="10" r="2" stroke="rgba(255,0,51,0.6)" stroke-width="0.8" fill="none"/>
-              <polyline points="6,0 6,6 0,6" stroke="rgba(255,0,51,0.4)" stroke-width="0.5" fill="none"/>
+              <polyline points="0,20 0,0 20,0" class="cy-svg-cyan" stroke-width="1.5" />
+              <rect x="0" y="0" width="5" height="5" class="cy-svg-cyan" stroke-width="1" />
+              <circle cx="10" cy="10" r="2" stroke="rgba(255,0,51,0.6)" stroke-width="0.8" fill="none" />
+              <polyline points="6,0 6,6 0,6" stroke="rgba(255,0,51,0.4)" stroke-width="0.5" fill="none" />
             </svg>
           </div>
           <div class="cy-corner cy-corner--bl" aria-hidden="true">
             <svg viewBox="0 0 28 28">
-              <polyline points="0,20 0,0 20,0"  class="cy-svg-cyan" stroke-width="1.5"/>
-              <rect x="0" y="0" width="5" height="5" class="cy-svg-cyan" stroke-width="1"/>
-              <circle cx="10" cy="10" r="2" stroke="rgba(255,0,51,0.5)" stroke-width="0.8" fill="none"/>
+              <polyline points="0,20 0,0 20,0" class="cy-svg-cyan" stroke-width="1.5" />
+              <rect x="0" y="0" width="5" height="5" class="cy-svg-cyan" stroke-width="1" />
+              <circle cx="10" cy="10" r="2" stroke="rgba(255,0,51,0.5)" stroke-width="0.8" fill="none" />
             </svg>
           </div>
           <div class="cy-corner cy-corner--br" aria-hidden="true">
             <svg viewBox="0 0 28 28">
-              <polyline points="0,20 0,0 20,0"  class="cy-svg-red"  stroke-width="1.5"/>
-              <rect x="0" y="0" width="5" height="5" class="cy-svg-red" stroke-width="1"/>
-              <circle cx="10" cy="10" r="2" stroke="rgba(0,229,255,0.5)" stroke-width="0.8" fill="none"/>
+              <polyline points="0,20 0,0 20,0" class="cy-svg-red" stroke-width="1.5" />
+              <rect x="0" y="0" width="5" height="5" class="cy-svg-red" stroke-width="1" />
+              <circle cx="10" cy="10" r="2" stroke="rgba(0,229,255,0.5)" stroke-width="0.8" fill="none" />
             </svg>
           </div>
-
-          <!-- ── Data indicators (fictional HUD numbers) ── -->
-          <div class="cy-data-tl" aria-hidden="true">SYS·01<br/><span class="cy-blink">▮</span> ONLINE</div>
-          <div class="cy-data-tr" aria-hidden="true">NET·7F3A<br/>00.jlvrs</div>
-          <div class="cy-data-bl" aria-hidden="true">VER·2.4.1<br/>AUTH·OK</div>
-          <div class="cy-data-br" aria-hidden="true">LAT·12ms<br/>PKT·<span class="cy-blink">██</span></div>
 
           <!-- ── Main card body ── -->
           <div class="cy-card-body">
             <div class="cy-profile-header">
 
               <!-- Avatar -->
-              <div class="avatar-wrap" onclick="openAvatarLightbox()" style="cursor:pointer;"
-                role="button" tabindex="0" onkeydown="if(event.key==='Enter') openAvatarLightbox()"
-                aria-label="Ver foto de perfil ampliada" title="Ver foto de perfil">
+              <div class="avatar-wrap" onclick="openAvatarLightbox()" style="cursor:pointer;" role="button" tabindex="0"
+                onkeydown="if(event.key==='Enter') openAvatarLightbox()" aria-label="Ver foto de perfil ampliada"
+                title="Ver foto de perfil">
                 <div class="cy-avatar-ring">
                   <img src="assets/perfil.jpeg" alt="Foto de perfil de Joel" id="profileAvatar" />
                 </div>
@@ -177,14 +175,18 @@
                 </h1>
                 <p class="cy-fullname">Joel David RM</p>
                 <p class="cy-bio">
-                  <strong>Joel 🕷️</strong>.<br />
+                  <strong>🕷️</strong>.<br />
                   No sé que hice pero intentaré mantenerlo vivo xd.<br />
-                  Pa que sirve esto? No sé pero subiré fotos que no publico porque me llega.
                 </p>
 
               </div>
             </div>
           </div><!-- /cy-card-body -->
+
+          <!-- Spidey en el borde superior derecho -->
+          <div class="cy-spidey-wrap" aria-hidden="true">
+            <img src="assets/spidey-perfil.png" alt="" class="cy-spidey" />
+          </div>
 
           <!-- ── Status bar ── -->
           <div class="cy-status-bar" aria-hidden="true">
@@ -203,19 +205,23 @@
 
           <!-- ── Cyberpunk Tab Bar ── -->
           <div class="cy-tabs" id="tabBar" role="tablist" aria-label="Vistas">
-            <button class="cy-tab-item active" id="tab-grid" role="tab" aria-selected="true" onclick="switchView('grid')">
+            <button class="cy-tab-item active" id="tab-grid" role="tab" aria-selected="true"
+              onclick="switchView('grid')">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-                <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
               </svg>
               Grid
             </button>
             <div class="cy-tab-sep" aria-hidden="true"></div>
             <button class="cy-tab-item" id="tab-feed" role="tab" aria-selected="false" onclick="switchView('feed')">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                   stroke-width="2" aria-hidden="true">
-                <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/>
-                <line x1="3" y1="18" x2="21" y2="18"/>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
               </svg>
               Feed
             </button>
@@ -349,7 +355,7 @@
     <!-- FOOTER ─────────────────────────────── -->
     <footer class="footer" role="contentinfo">
       <span class="footer-logo">🕷️ Joel's Universe</span>
-      <p>Hecho por aburrimiento por Joel &nbsp;·&nbsp; <span id="year"></span></p>
+      <p>Joel &nbsp;·&nbsp; <span id="year"></span></p>
     </footer>
 
   </main>
@@ -507,7 +513,7 @@
 
       if (view === 'grid') {
         grid.style.display = 'grid'; feed.style.display = 'none';
-        tg.classList.add('active');    tg.setAttribute('aria-selected', 'true');
+        tg.classList.add('active'); tg.setAttribute('aria-selected', 'true');
         tg.classList.remove('active-red');
         tf.classList.remove('active'); tf.classList.remove('active-red');
         tf.setAttribute('aria-selected', 'false');
