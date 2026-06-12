@@ -1951,10 +1951,12 @@ body::after {
 
 /* ── Spidey Inline Icon ── */
 .spider-icon {
-  width: 1.25em; /* Se adapta al tamaño del texto en el que esté */
+  width: 1.25em;
+  /* Se adapta al tamaño del texto en el que esté */
   height: auto;
   vertical-align: middle;
-  mix-blend-mode: screen; /* Elimina fondo oscuro */
+  mix-blend-mode: screen;
+  /* Elimina fondo oscuro */
   display: inline-block;
   margin-right: 0.2em;
   position: relative;

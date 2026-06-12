@@ -30,7 +30,8 @@
   <!-- ── NAVBAR ────────────────────────────── -->
   <header>
     <nav class="navbar" id="navbar" aria-label="Navegación principal">
-      <span class="navbar-logo" onclick="scrollToTop()" role="button" tabindex="0"><img src="assets/spidey-perfil.png" class="spider-icon" alt="" /> Joel's Universe</span>
+      <span class="navbar-logo" onclick="scrollToTop()" role="button" tabindex="0"><img src="assets/spidey-perfil.png"
+          class="spider-icon" alt="" /> Joel's Universe</span>
 
       <div class="navbar-actions">
         <!-- Va directo a la página en GitHub -->
@@ -176,7 +177,7 @@
                 <p class="cy-fullname">Joel David RM</p>
                 <p class="cy-bio">
                   <strong>🕷️</strong>.<br />
-                  No sé que hice pero intentaré mantenerlo vivo xd.<br />
+                  No sé que hice pero intentaré mantenerlo vivo. xd<br />
                 </p>
 
               </div>
@@ -497,7 +498,6 @@
         </div>
       </article>`).join('');
     }
-
     /* ── View switcher ── */
     function switchView(view) {
       currentView = view;
@@ -522,6 +522,7 @@
       showSection('feed');
     }
 
+
     /* ── Section ── */
     function showSection(s) {
       ['feed', 'about', 'contact'].forEach(id => {
@@ -536,7 +537,6 @@
       if (ps) ps.style.display = s === 'feed' ? '' : 'none';
       if (tb) tb.style.display = s === 'feed' ? '' : 'none';
     }
-
     /* ── Like ── */
     function toggleLike(id) {
       const p = posts.find(x => x.id === id); if (!p) return;
@@ -553,6 +553,7 @@
       if (cnt) cnt.textContent = p.likes;
       if (p.liked) showToast('❤️ ¡Me gusta!', 'success');
     }
+
 
     /* ── Share ── */
     function sharePost(id) {
