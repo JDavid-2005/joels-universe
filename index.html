@@ -15,7 +15,7 @@
 
 <body>
 
-  <!-- ── PARTICLES ──────────────────────────── -->
+  <!-- ── PARTICLES ────────────────────────── -->
   <div class="particles-container" aria-hidden="true">
     <div class="particle"></div>
     <div class="particle"></div>
@@ -27,14 +27,15 @@
     <div class="particle"></div>
   </div>
 
-  <!-- ── NAVBAR ────────────────────────────── -->
+  <!-- ── NAVBAR ──────────────────────────── -->
   <header>
     <nav class="navbar" id="navbar" aria-label="Navegación principal">
-      <span class="navbar-logo" onclick="scrollToTop()" role="button" tabindex="0"><img src="assets/spidey-perfil.png"
-          class="spider-icon" alt="" /> Joel's Universe</span>
+      <span class="navbar-logo" onclick="scrollToTop()" role="button" tabindex="0">
+        <img src="assets/spidey-perfil.png" class="spider-icon" alt="" />
+        Joel's Universe
+      </span>
 
       <div class="navbar-actions">
-        <!-- Va directo a la página en GitHub -->
         <a href="https://a242844jr-joel.github.io/pagina-web/" target="_blank" rel="noopener noreferrer"
           class="btn-proyectos" id="btn-nav-proyectos" aria-label="Ver mis proyectos">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -42,7 +43,7 @@
             <polyline points="16 18 22 12 16 6"></polyline>
             <polyline points="8 6 2 12 8 18"></polyline>
           </svg>
-          Proyectos
+          <span>Proyectos</span>
         </a>
 
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false"
@@ -53,14 +54,16 @@
     </nav>
   </header>
 
-  <!-- ── DRAWER OVERLAY ─────────────────────── -->
+  <!-- ── DRAWER OVERLAY ──────────────────── -->
   <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
 
-  <!-- ── SIDE DRAWER ────────────────────────── -->
+  <!-- ── SIDE DRAWER ─────────────────────── -->
   <nav class="drawer" id="drawer" role="navigation" aria-label="Menú lateral" aria-hidden="true">
 
     <div class="drawer-header">
-      <span class="drawer-title"><img src="assets/spidey-perfil.png" class="spider-icon" alt="" /> Menú</span>
+      <span class="drawer-title">
+        <img src="assets/spidey-perfil.png" class="spider-icon" alt="" /> Menú
+      </span>
       <button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">✕</button>
     </div>
 
@@ -89,10 +92,10 @@
     </div>
   </nav>
 
-  <!-- ── MAIN ──────────────────────────────── -->
+  <!-- ── MAIN ────────────────────────────── -->
   <main class="main-wrapper" role="main">
 
-    <!-- ══ CYBERPUNK / STARK TECH PROFILE CARD ══ -->
+    <!-- ══ PROFILE CARD ══ -->
     <section id="profileSection" aria-label="Perfil">
       <div class="cy-card-wrapper">
         <div class="cy-card" id="cyCard">
@@ -121,36 +124,32 @@
             <div class="cy-tick"></div>
           </div>
 
-          <!-- ── Beveled corners (SVG mechanical) ── -->
+          <!-- Beveled corners -->
           <div class="cy-corner cy-corner--tl" aria-hidden="true">
             <svg viewBox="0 0 28 28">
               <polyline points="0,20 0,0 20,0" class="cy-svg-red" stroke-width="1.5" />
               <polyline points="0,28 0,0 28,0" class="cy-svg-cyan" stroke-width="0.6" opacity="0.5" />
               <rect x="0" y="0" width="5" height="5" class="cy-svg-red" stroke-width="1" />
-              <circle cx="10" cy="10" r="2" stroke="rgba(0,229,255,0.6)" stroke-width="0.8" fill="none" />
-              <polyline points="6,0 6,6 0,6" stroke="rgba(0,229,255,0.4)" stroke-width="0.5" fill="none" />
+              <circle cx="10" cy="10" r="2" stroke="rgba(0,229,255,0.5)" stroke-width="0.8" fill="none" />
             </svg>
           </div>
           <div class="cy-corner cy-corner--tr" aria-hidden="true">
             <svg viewBox="0 0 28 28">
               <polyline points="0,20 0,0 20,0" class="cy-svg-cyan" stroke-width="1.5" />
               <rect x="0" y="0" width="5" height="5" class="cy-svg-cyan" stroke-width="1" />
-              <circle cx="10" cy="10" r="2" stroke="rgba(255,0,51,0.6)" stroke-width="0.8" fill="none" />
-              <polyline points="6,0 6,6 0,6" stroke="rgba(255,0,51,0.4)" stroke-width="0.5" fill="none" />
+              <circle cx="10" cy="10" r="2" stroke="rgba(255,0,51,0.5)" stroke-width="0.8" fill="none" />
             </svg>
           </div>
           <div class="cy-corner cy-corner--bl" aria-hidden="true">
             <svg viewBox="0 0 28 28">
               <polyline points="0,20 0,0 20,0" class="cy-svg-cyan" stroke-width="1.5" />
               <rect x="0" y="0" width="5" height="5" class="cy-svg-cyan" stroke-width="1" />
-              <circle cx="10" cy="10" r="2" stroke="rgba(255,0,51,0.5)" stroke-width="0.8" fill="none" />
             </svg>
           </div>
           <div class="cy-corner cy-corner--br" aria-hidden="true">
             <svg viewBox="0 0 28 28">
               <polyline points="0,20 0,0 20,0" class="cy-svg-red" stroke-width="1.5" />
               <rect x="0" y="0" width="5" height="5" class="cy-svg-red" stroke-width="1" />
-              <circle cx="10" cy="10" r="2" stroke="rgba(0,229,255,0.5)" stroke-width="0.8" fill="none" />
             </svg>
           </div>
 
@@ -160,8 +159,7 @@
 
               <!-- Avatar -->
               <div class="avatar-wrap" onclick="openAvatarLightbox()" style="cursor:pointer;" role="button" tabindex="0"
-                onkeydown="if(event.key==='Enter') openAvatarLightbox()" aria-label="Ver foto de perfil ampliada"
-                title="Ver foto de perfil">
+                onkeydown="if(event.key==='Enter') openAvatarLightbox()" aria-label="Ver foto de perfil ampliada">
                 <div class="cy-avatar-ring">
                   <img src="assets/perfil.jpeg" alt="Foto de perfil de Joel" id="profileAvatar" />
                 </div>
@@ -177,29 +175,73 @@
                 <p class="cy-fullname">Joel David RM</p>
                 <p class="cy-bio">
                   <strong>🕷️</strong>.<br />
-                  No sé que hice pero intentaré mantenerlo vivo. xd<br />
+                  No sé que hice pero intentaré mantenerlo vivo. xd
                 </p>
 
+                <!-- ── Music Player ── -->
+                <div class="music-player" id="musicPlayer" role="region" aria-label="Reproductor de música">
+                  <audio id="audioEl" src="assets/korn.mp3" preload="none"></audio>
+
+                  <!-- Album art + play -->
+                  <button class="music-play-btn" id="musicPlayBtn" aria-label="Reproducir / Pausar">
+                    <div class="music-disc" id="musicDisc" aria-hidden="true">
+                      <span class="music-disc-inner"></span>
+                    </div>
+                    <svg class="music-play-icon" id="iconPlay" viewBox="0 0 24 24" fill="currentColor"
+                      aria-hidden="true">
+                      <polygon points="5,3 19,12 5,21" />
+                    </svg>
+                    <svg class="music-play-icon music-pause-icon" id="iconPause" viewBox="0 0 24 24" fill="currentColor"
+                      aria-hidden="true" style="display:none;">
+                      <rect x="6" y="4" width="4" height="16" />
+                      <rect x="14" y="4" width="4" height="16" />
+                    </svg>
+                  </button>
+
+                  <!-- Track info + progress -->
+                  <div class="music-info">
+                    <div class="music-title-row">
+                      <span class="music-title">A Different World</span>
+                      <span class="music-note" aria-hidden="true">🎵</span>
+                    </div>
+                    <span class="music-artist">Korn feat. Corey Taylor</span>
+
+                    <!-- Progress bar -->
+                    <div class="music-progress-wrap" role="slider" aria-label="Progreso" aria-valuemin="0"
+                      aria-valuemax="100" aria-valuenow="0" id="progressWrap">
+                      <div class="music-progress-bg">
+                        <div class="music-progress-fill" id="progressFill"></div>
+                        <div class="music-progress-thumb" id="progressThumb"></div>
+                      </div>
+                    </div>
+
+                    <div class="music-time-row">
+                      <span class="music-time" id="timeElapsed">0:00</span>
+                      <span class="music-time" id="timeDuration">--:--</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Music Player -->
+
               </div>
+
             </div>
           </div><!-- /cy-card-body -->
 
           <!-- ── Status bar ── -->
           <div class="cy-status-bar" aria-hidden="true">
             <div class="cy-status-item">
-              <div class="cy-status-dot"></div>
-              GRID · ACTIVE
+              <div class="cy-status-dot"></div>GRID · ACTIVE
             </div>
             <div class="cy-status-sep"></div>
             <div class="cy-status-item">SYS · 7F3A</div>
             <div class="cy-status-sep"></div>
             <div class="cy-status-item cy-status-item--red">
-              <div class="cy-status-dot"></div>
-              FEED · READY
+              <div class="cy-status-dot"></div>FEED · READY
             </div>
           </div>
 
-          <!-- ── Cyberpunk Tab Bar ── -->
+          <!-- ── Tab Bar ── -->
           <div class="cy-tabs" id="tabBar" role="tablist" aria-label="Vistas">
             <button class="cy-tab-item active" id="tab-grid" role="tab" aria-selected="true"
               onclick="switchView('grid')">
@@ -229,11 +271,7 @@
 
     <!-- FEED / GALLERY ─────────────────────── -->
     <section class="feed-section content-section active" id="feed-section" aria-label="Galería">
-
-      <!-- Grid -->
       <div class="photo-grid" id="photoGrid" role="list" aria-label="Cuadrícula"></div>
-
-      <!-- Feed list -->
       <div class="photo-feed" id="photoFeed" role="list" aria-label="Feed" style="display:none;"></div>
     </section>
 
@@ -243,9 +281,7 @@
       <div class="about-card">
         <p class="about-greeting gradient-text">¡Ñiñiñiñi, soy Joel!</p>
 
-        <!-- Info personal -->
         <div class="about-info-grid">
-
           <div class="about-info-item">
             <span class="about-info-icon">👤</span>
             <div>
@@ -258,7 +294,7 @@
             <span class="about-info-icon">🔢</span>
             <div>
               <p class="about-info-label">Edad</p>
-              <p class="about-info-value">20 años</p>
+              <p class="about-info-value">21 años</p>
             </div>
           </div>
 
@@ -285,7 +321,6 @@
               <p class="about-info-value">SMX (Sistemas Microinformáticos y Redes)</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -294,9 +329,7 @@
     <section class="contact-section content-section" id="contact-section" aria-label="Contacto">
       <h2 class="section-title">🌐 Redes Sociales</h2>
       <div class="contact-card">
-        <p style="color:var(--clr-text-muted); font-size:0.9rem; margin-bottom:1rem;">
-          Sigueme si quieres o chinga tu mouser.
-        </p>
+        <p>Sígueme si quieres o chinga tu mouser.</p>
         <div class="contact-info-list" role="list">
 
           <!-- Facebook -->
@@ -350,7 +383,9 @@
 
     <!-- FOOTER ─────────────────────────────── -->
     <footer class="footer" role="contentinfo">
-      <span class="footer-logo"><img src="assets/spidey-perfil.png" class="spider-icon" alt="" /> Joel's Universe</span>
+      <span class="footer-logo">
+        <img src="assets/spidey-perfil.png" class="spider-icon" alt="" /> Joel's Universe
+      </span>
       <p>Joel &nbsp;·&nbsp; <span id="year"></span></p>
     </footer>
 
@@ -374,61 +409,16 @@
   <!-- ── SCRIPT ────────────────────────────── -->
   <script>
     /* ── Data ── */
-    let posts = [
-      {
-        id: 1, img: 'assets/post1.jpeg',
-        title: 'No me drogo (o si?)',
-        caption: 'No sé cuando decidí estudiar SMX...',
-        tags: ['#NoEstudienSMX']
-      },
-      {
-        id: 2, img: 'assets/post2.jpeg',
-        title: 'Visca Barça sempre 🔵🔴',
-        caption: 'Pronto la Sexta',
-        tags: ['#PedriMiHombre']
-      },
-      {
-        id: 3, img: 'assets/post3.jpeg',
-        title: 'Jorgito Luna',
-        caption: 'El intocable George Moon',
-        tags: ['#Ricolaaaaaas']
-      },
-      {
-        id: 4, img: 'assets/post4.jpeg',
-        title: 'Mi lesbiana favorita 🏳️‍🌈',
-        caption: 'Iris, Yhssis, Eevee.',
-        tags: ['#MisFotos']
-      },
-      {
-        id: 5, img: 'assets/post5.jpeg',
-        title: 'Dame tu galletita 😈',
-        caption: 'Panchitada moment.',
-        tags: ['#MisFotos']
-      },
-      {
-        id: 6, img: 'assets/post6.jpeg',
-        title: 'Mis Reinas',
-        caption: 'Mi loca y mi más loca',
-        tags: ['#MisFotos']
-      },
-      {
-        id: 7, img: 'assets/post7.jpeg',
-        title: 'AleZoe',
-        caption: 'Pelean más que la inlkbngasg pero se aman',
-        tags: ['#MisFotos']
-      },
-      {
-        id: 8, img: 'assets/post8.jpeg',
-        title: 'Freddy?',
-        caption: 'Mare meva noi',
-        tags: ['#MisFotos']
-      },
-      {
-        id: 9, img: 'assets/post9.jpeg',
-        title: 'Guau',
-        caption: 'Si, soy ese realmente',
-        tags: ['#MisFotos']
-      }
+    const posts = [
+      { id: 1, img: 'assets/post1.jpeg', title: 'No me drogo (o si?)', caption: 'No sé cuando decidí estudiar SMX...', tags: ['#NoEstudienSMX'] },
+      { id: 2, img: 'assets/post2.jpeg', title: 'Visca Barça sempre 🔵🔴', caption: 'Pronto la Sexta', tags: ['#PedriMiHombre'] },
+      { id: 3, img: 'assets/post3.jpeg', title: 'Jorgito Luna', caption: 'El intocable George Moon', tags: ['#Ricolaaaaaas'] },
+      { id: 4, img: 'assets/post4.jpeg', title: 'Mi lesbiana favorita 🏳️‍🌈', caption: 'Iris, Yhssis, Eevee.', tags: ['#MisFotos'] },
+      { id: 5, img: 'assets/post5.jpeg', title: 'Dame tu galletita 😈', caption: 'Panchitada moment.', tags: ['#MisFotos'] },
+      { id: 6, img: 'assets/post6.jpeg', title: 'Mis Reinas', caption: 'Mi loca y mi más loca', tags: ['#MisFotos'] },
+      { id: 7, img: 'assets/post7.jpeg', title: 'AleZoe', caption: 'Pelean más que la inkbngasg pero se aman', tags: ['#MisFotos'] },
+      { id: 8, img: 'assets/post8.jpeg', title: 'Freddy?', caption: 'Mare meva noi', tags: ['#MisFotos'] },
+      { id: 9, img: 'assets/post9.jpeg', title: 'Guau', caption: 'Si, soy ese realmente', tags: ['#MisFotos'] },
     ];
 
     let currentView = 'grid';
@@ -445,59 +435,61 @@
 
     function renderGrid() {
       document.getElementById('photoGrid').innerHTML = posts.map(p => `
-      <article class="photo-grid-item" role="listitem" tabindex="0"
-        onclick="openLightbox(${p.id})"
-        onkeydown="if(event.key==='Enter') openLightbox(${p.id})"
-        aria-label="${p.title}">
-        <img src="${p.img}" alt="${p.title}" loading="lazy" />
-      </article>`).join('');
+        <article class="photo-grid-item" role="listitem" tabindex="0"
+          onclick="openLightbox(${p.id})"
+          onkeydown="if(event.key==='Enter') openLightbox(${p.id})"
+          aria-label="${p.title}">
+          <img src="${p.img}" alt="${p.title}" loading="lazy" />
+          <div class="grid-hint" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </div>
+        </article>`).join('');
     }
 
     function renderFeed() {
       document.getElementById('photoFeed').innerHTML = posts.map((p, i) => `
-      <article class="feed-card" role="listitem" style="animation-delay:${i * 0.1}s">
-        <div class="feed-card-header">
-          <div class="card-avatar">
-            <img src="assets/perfil.jpeg" alt="Avatar" />
+        <article class="feed-card" role="listitem" style="animation-delay:${i * 0.08}s">
+          <div class="feed-card-header">
+            <div class="card-avatar">
+              <img src="assets/perfil.jpeg" alt="Avatar" />
+            </div>
+            <div class="card-meta">
+              <p class="card-name">@00.jlvrs <img src="assets/spidey-perfil.png" class="spider-icon" alt="" /></p>
+            </div>
+            <button class="card-options-btn" aria-label="Opciones">···</button>
           </div>
-          <div class="card-meta">
-            <p class="card-name">@00.jlvrs <img src="assets/spidey-perfil.png" class="spider-icon" alt="" /></p>
+          <div class="feed-card-image">
+            <img src="${p.img}" alt="${p.title}" loading="lazy" />
           </div>
-          <button class="card-options-btn" aria-label="Opciones">···</button>
-        </div>
-        <div class="feed-card-image">
-          <img src="${p.img}" alt="${p.title}" loading="lazy" />
-        </div>
-        <div class="feed-card-actions">
-          <button class="action-btn" onclick="openLightbox(${p.id})" aria-label="Ver">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" aria-hidden="true">
-              <circle cx="11" cy="11" r="8"/>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            </svg>
-            Ver
-          </button>
-          <button class="action-btn action-btn-spacer"
-            onclick="sharePost(${p.id})" aria-label="Compartir">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" aria-hidden="true">
-              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/>
-              <circle cx="18" cy="19" r="3"/>
-              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
-              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-            </svg>
-          </button>
-        </div>
-        <div class="feed-card-content">
-          <p class="feed-card-caption">
-            <strong>@00.jlvrs</strong> ${p.caption}
-          </p>
-          <div class="feed-card-tags">
-            ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+          <div class="feed-card-actions">
+            <button class="action-btn" onclick="openLightbox(${p.id})" aria-label="Ver">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              Ver
+            </button>
+            <button class="action-btn action-btn-spacer" onclick="sharePost(${p.id})" aria-label="Compartir">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/>
+                <circle cx="18" cy="19" r="3"/>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                <line x1="15.41" y1="6.51"  x2="8.59"  y2="10.49"/>
+              </svg>
+            </button>
           </div>
-        </div>
-      </article>`).join('');
+          <div class="feed-card-content">
+            <p class="feed-card-caption">
+              <strong>@00.jlvrs</strong> ${p.caption}
+            </p>
+            <div class="feed-card-tags">
+              ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+            </div>
+          </div>
+        </article>`).join('');
     }
+
     /* ── View switcher ── */
     function switchView(view) {
       currentView = view;
@@ -508,20 +500,15 @@
 
       if (view === 'grid') {
         grid.style.display = 'grid'; feed.style.display = 'none';
-        tg.classList.add('active'); tg.setAttribute('aria-selected', 'true');
-        tg.classList.remove('active-red');
-        tf.classList.remove('active'); tf.classList.remove('active-red');
-        tf.setAttribute('aria-selected', 'false');
+        tg.classList.add('active'); tg.setAttribute('aria-selected', 'true'); tg.classList.remove('active-red');
+        tf.classList.remove('active', 'active-red'); tf.setAttribute('aria-selected', 'false');
       } else {
         grid.style.display = 'none'; feed.style.display = 'flex';
-        tf.classList.add('active-red'); tf.setAttribute('aria-selected', 'true');
-        tf.classList.remove('active');
-        tg.classList.remove('active'); tg.classList.remove('active-red');
-        tg.setAttribute('aria-selected', 'false');
+        tf.classList.add('active-red'); tf.setAttribute('aria-selected', 'true'); tf.classList.remove('active');
+        tg.classList.remove('active', 'active-red'); tg.setAttribute('aria-selected', 'false');
       }
       showSection('feed');
     }
-
 
     /* ── Section ── */
     function showSection(s) {
@@ -537,23 +524,6 @@
       if (ps) ps.style.display = s === 'feed' ? '' : 'none';
       if (tb) tb.style.display = s === 'feed' ? '' : 'none';
     }
-    /* ── Like ── */
-    function toggleLike(id) {
-      const p = posts.find(x => x.id === id); if (!p) return;
-      p.liked = !p.liked;
-      p.likes += p.liked ? 1 : -1;
-      const btn = document.getElementById(`like-btn-${id}`);
-      const cnt = document.getElementById(`likes-${id}`);
-      if (btn) {
-        btn.classList.toggle('liked', p.liked);
-        btn.setAttribute('aria-label', p.liked ? 'Quitar like' : 'Dar like');
-        const svg = btn.querySelector('svg');
-        if (svg) svg.setAttribute('fill', p.liked ? 'currentColor' : 'none');
-      }
-      if (cnt) cnt.textContent = p.likes;
-      if (p.liked) showToast('❤️ ¡Me gusta!', 'success');
-    }
-
 
     /* ── Share ── */
     function sharePost(id) {
@@ -565,24 +535,29 @@
       }
     }
 
-    /* ── Lightbox foto de perfil ── */
+    /* ── Lightbox (avatar) ── */
     function openAvatarLightbox() {
       document.getElementById('lightboxImg').src = 'assets/perfil.jpeg';
       document.getElementById('lightboxImg').alt = 'Foto de perfil de Joel';
-      document.getElementById('lightboxTitle').innerHTML = '<img src="assets/spidey-perfil.png" class="spider-icon" alt="" /> Joel';
-      document.getElementById('lightboxCaption').innerHTML = '<strong>@00.jlvrs</strong> · Foto de perfil';
-      const lb = document.getElementById('lightbox');
-      lb.classList.add('active'); lb.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+      document.getElementById('lightboxTitle').innerHTML =
+        '<img src="assets/spidey-perfil.png" class="spider-icon" alt="" /> Joel';
+      document.getElementById('lightboxCaption').innerHTML =
+        '<strong>@00.jlvrs</strong> · Foto de perfil';
+      openLightboxEl();
     }
 
-    /* ── Lightbox fotos ── */
+    /* ── Lightbox (post) ── */
     function openLightbox(id) {
       const p = posts.find(x => x.id === id); if (!p) return;
       document.getElementById('lightboxImg').src = p.img;
       document.getElementById('lightboxImg').alt = p.title;
       document.getElementById('lightboxTitle').textContent = p.title;
-      document.getElementById('lightboxCaption').innerHTML = `<strong>@00.jlvrs</strong> ${p.caption}`;
+      document.getElementById('lightboxCaption').innerHTML =
+        `<strong>@00.jlvrs</strong> ${p.caption}`;
+      openLightboxEl();
+    }
+
+    function openLightboxEl() {
       const lb = document.getElementById('lightbox');
       lb.classList.add('active'); lb.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
@@ -644,7 +619,91 @@
         if (e.key === 'Escape') { closeLightbox(); closeDrawer(); }
       });
     }
+    /* ── Music Player ── */
+    (function () {
+      const audio = document.getElementById('audioEl');
+      const btn = document.getElementById('musicPlayBtn');
+      const player = document.getElementById('musicPlayer');
+      const disc = document.getElementById('musicDisc');
+      const iconPlay = document.getElementById('iconPlay');
+      const iconPause = document.getElementById('iconPause');
+      const fill = document.getElementById('progressFill');
+      const thumb = document.getElementById('progressThumb');
+      const progWrap = document.getElementById('progressWrap');
+      const elapsed = document.getElementById('timeElapsed');
+      const duration = document.getElementById('timeDuration');
+
+      function fmt(s) {
+        if (!isFinite(s)) return '--:--';
+        const m = Math.floor(s / 60);
+        const sec = Math.floor(s % 60).toString().padStart(2, '0');
+        return `${m}:${sec}`;
+      }
+
+      function setProgress(pct) {
+        fill.style.width = pct + '%';
+        thumb.style.left = pct + '%';
+        progWrap.setAttribute('aria-valuenow', Math.round(pct));
+      }
+
+      function onTimeUpdate() {
+        if (!audio.duration) return;
+        const pct = (audio.currentTime / audio.duration) * 100;
+        setProgress(pct);
+        elapsed.textContent = fmt(audio.currentTime);
+        duration.textContent = fmt(audio.duration);
+      }
+
+      function onLoaded() {
+        duration.textContent = fmt(audio.duration);
+      }
+
+      function togglePlay() {
+        if (audio.paused) {
+          audio.play().then(() => {
+            player.classList.add('playing');
+            iconPlay.style.display = 'none';
+            iconPause.style.display = '';
+          }).catch(() => { });
+        } else {
+          audio.pause();
+          player.classList.remove('playing');
+          iconPlay.style.display = '';
+          iconPause.style.display = 'none';
+        }
+      }
+
+      function seek(e) {
+        if (!audio.duration) return;
+        const rect = progWrap.getBoundingClientRect();
+        const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+        audio.currentTime = (x / rect.width) * audio.duration;
+        onTimeUpdate();
+      }
+
+      let dragging = false;
+      progWrap.addEventListener('mousedown', e => { dragging = true; seek(e); });
+      document.addEventListener('mousemove', e => { if (dragging) seek(e); });
+      document.addEventListener('mouseup', () => { dragging = false; });
+
+      progWrap.addEventListener('touchstart', e => { dragging = true; seek(e.touches[0]); }, { passive: true });
+      document.addEventListener('touchmove', e => { if (dragging) seek(e.touches[0]); }, { passive: true });
+      document.addEventListener('touchend', () => { dragging = false; });
+
+      audio.addEventListener('timeupdate', onTimeUpdate);
+      audio.addEventListener('loadedmetadata', onLoaded);
+      audio.addEventListener('ended', () => {
+        player.classList.remove('playing');
+        iconPlay.style.display = '';
+        iconPause.style.display = 'none';
+        setProgress(0);
+        elapsed.textContent = '0:00';
+      });
+
+      btn.addEventListener('click', togglePlay);
+    })();
   </script>
+
 </body>
 
 </html>
